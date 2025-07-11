@@ -3,1052 +3,1358 @@
     "Functional Requirements": [
       {
         "requirement_id": "FR001",
-        "requirement_text": "System shall enable NGB Credit Card holders to pay school fees.",
-        "original_text": "Customers who have NGB credit card can easily pay for the student\u2019s school fee through Online banking, Mobile banking, IVR and E-Form [via Contact Center agent] and opt for converting the transaction to Easy Payment plan.",
-        "source_section": "1. INTRODUCTION",
-        "page_number": 1,
-        "line_number": 3
-      },
-      {
-        "requirement_id": "FR002",
-        "requirement_text": "System shall support school fee payments via Online Banking.",
-        "original_text": "Customers who have NGB credit card can easily pay for the student\u2019s school fee through Online banking...",
-        "source_section": "1. INTRODUCTION",
-        "page_number": 1,
-        "line_number": 3
-      },
-      {
-        "requirement_id": "FR003",
-        "requirement_text": "System shall support school fee payments via Mobile Banking.",
-        "original_text": "...Mobile banking...",
-        "source_section": "1. INTRODUCTION",
-        "page_number": 1,
-        "line_number": 3
-      },
-      {
-        "requirement_id": "FR004",
-        "requirement_text": "System shall support school fee payments via IVR.",
-        "original_text": "...IVR...",
-        "source_section": "1. INTRODUCTION",
-        "page_number": 1,
-        "line_number": 3
-      },
-      {
-        "requirement_id": "FR005",
-        "requirement_text": "System shall support school fee payments via E-Form, facilitated by a Contact Center agent.",
-        "original_text": "...E-Form [via Contact Center agent]...",
-        "source_section": "1. INTRODUCTION",
-        "page_number": 1,
-        "line_number": 3
-      },
-      {
-        "requirement_id": "FR006",
-        "requirement_text": "System shall allow customers to convert school fee payments to an Easy Payment Plan (EPP).",
-        "original_text": "...opt for converting the transaction to Easy Payment plan.",
-        "source_section": "1. INTRODUCTION",
-        "page_number": 1,
-        "line_number": 3
-      },
-      {
-        "requirement_id": "FR007",
         "requirement_text": "System shall provide an option for the Card Operations team to register school details.",
         "original_text": "An option to be made available for card operations team to register the school details.",
         "source_section": "A. SCHOOL REGISTRATION",
         "page_number": 1,
-        "line_number": 14
+        "line_number": 14,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Operations Team",
+          "Admin"
+        ]
       },
       {
-        "requirement_id": "FR007-a",
-        "requirement_text": "The school registration screen shall capture 'School Name'.",
-        "original_text": "- School Name",
+        "requirement_id": "FR002",
+        "requirement_text": "School registration screen shall capture School Name, Location, and School Account Number with NGB.",
+        "original_text": "- School Name - Location - School Account Number with NGB",
         "source_section": "A. SCHOOL REGISTRATION",
         "page_number": 1,
-        "line_number": 15
+        "line_number": 15,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Operations Team",
+          "Admin"
+        ]
       },
       {
-        "requirement_id": "FR007-b",
-        "requirement_text": "The school registration screen shall capture 'Location'.",
-        "original_text": "- Location",
-        "source_section": "A. SCHOOL REGISTRATION",
-        "page_number": 1,
-        "line_number": 16
-      },
-      {
-        "requirement_id": "FR007-c",
-        "requirement_text": "The school registration screen shall capture 'School Account Number with NGB'.",
-        "original_text": "- School Account Number with NGB",
-        "source_section": "A. SCHOOL REGISTRATION",
-        "page_number": 1,
-        "line_number": 17
-      },
-      {
-        "requirement_id": "FR008",
-        "requirement_text": "System shall allow internal configuration of NGB GL account numbers for GL settlement.",
+        "requirement_id": "FR003",
+        "requirement_text": "System shall allow configuration of NGB GL account number internally for GL settlement.",
         "original_text": "NGB GL account number to be configured internally in the system for GL settlement.",
         "source_section": "A. SCHOOL REGISTRATION",
         "page_number": 1,
-        "line_number": 19
+        "line_number": 19,
+        "confidence_score": 0.95,
+        "stakeholders": [
+          "Admin",
+          "Operations Team",
+          "NGB (Bank)"
+        ]
       },
       {
-        "requirement_id": "FR009",
+        "requirement_id": "FR004",
         "requirement_text": "System shall provide an option to register different types of fee payments supported by each school (e.g., School Fee, Bus Fee).",
         "original_text": "An option should be available to register the different type of Fee payments supported by each school. For eg: School Fee, Bus Fee, etc.",
         "source_section": "A. SCHOOL REGISTRATION",
         "page_number": 1,
-        "line_number": 20
+        "line_number": 20,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Operations Team",
+          "Admin"
+        ]
       },
       {
-        "requirement_id": "FR010",
-        "requirement_text": "System shall display registered fee types on the fee payment page.",
+        "requirement_id": "FR005",
+        "requirement_text": "Fee payment page shall list the registered fee types.",
         "original_text": "These fee types should be listed in the fee payment page.",
         "source_section": "A. SCHOOL REGISTRATION",
         "page_number": 1,
-        "line_number": 20
+        "line_number": 20,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
+      },
+      {
+        "requirement_id": "FR006",
+        "requirement_text": "System shall provide an option to register student details via Online Banking, Mobile Banking, and Contact Center (using E-Form).",
+        "original_text": "An option to be made available to register the student details through Online banking, Mobile Banking and Contact center [using E-Form].",
+        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
+        "page_number": 1,
+        "line_number": 22,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user",
+          "Contact Center Agent"
+        ]
+      },
+      {
+        "requirement_id": "FR007",
+        "requirement_text": "System shall allow customers to register more than one student.",
+        "original_text": "More than one student can be registered for a customer",
+        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
+        "page_number": 1,
+        "line_number": 24,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
+      },
+      {
+        "requirement_id": "FR008",
+        "requirement_text": "Student details provided shall be captured under the customer's RIM.",
+        "original_text": "the student details provided should be captured under the customer RIM.",
+        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
+        "page_number": 1,
+        "line_number": 24,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "NGB (Bank)",
+          "Operations Team"
+        ]
+      },
+      {
+        "requirement_id": "FR009",
+        "requirement_text": "System shall allow modification or de-registration of student details from the registered student list.",
+        "original_text": "Student details can be modified or de-registered from the registered student list.",
+        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
+        "page_number": 1,
+        "line_number": 26,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user",
+          "Contact Center Agent"
+        ]
+      },
+      {
+        "requirement_id": "FR010",
+        "requirement_text": "System shall send an SMS to the customer during student registration, amendment, or de-registration.",
+        "original_text": "SMS should be sent to customer during student registration / amendment / de-registration of a student.",
+        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
+        "page_number": 1,
+        "line_number": 27,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
+      },
+      {
+        "requirement_id": "FR010-a",
+        "requirement_text": "The SMS for student registration, amendment, or de-registration shall be in a predefined format including Student ID, Student Name, and School Name.",
+        "original_text": "SMS should be in a predefined format with Student ID, Student Name and School Name.",
+        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
+        "page_number": 1,
+        "line_number": 27,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user",
+          "Product Owner"
+        ]
       },
       {
         "requirement_id": "FR011",
-        "requirement_text": "System shall allow student registration via Online Banking.",
-        "original_text": "An option to be made available to register the student details through Online banking...",
-        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
+        "requirement_text": "Online Banking and Mobile Banking shall provide a new option for Student Registration/Student Deregistration.",
+        "original_text": "New option should be provided in online banking / mobile banking for Student Registration/ Student Deregistration",
+        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 1,
-        "line_number": 22
+        "line_number": 29,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user",
+          "Product Owner"
+        ]
       },
       {
         "requirement_id": "FR012",
-        "requirement_text": "System shall allow student registration via Mobile Banking.",
-        "original_text": "...Mobile Banking...",
-        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
+        "requirement_text": "Student registration process shall capture Student Name, Student ID Number, and School Name with Location (selected from a dropdown list of registered schools) as mandatory details.",
+        "original_text": "Following basic details are mandatory and have to be captured in student registration process - Student Name - Student ID Number** - School Name with Location (dropdown list with registered schools)",
+        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 1,
-        "line_number": 22
+        "line_number": 30,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
         "requirement_id": "FR013",
-        "requirement_text": "System shall allow student registration via Contact Center using an E-Form.",
-        "original_text": "...and Contact center [using E-Form].",
-        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
+        "requirement_text": "Student registration/maintenance shall be authenticated via OTP validation.",
+        "original_text": "Student registration / maintenance should be authenticated via OTP validation",
+        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 1,
-        "line_number": 22
+        "line_number": 35,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user",
+          "Compliance Officer"
+        ]
       },
       {
         "requirement_id": "FR014",
-        "requirement_text": "System shall allow a customer to register more than one student.",
-        "original_text": "More than one student can be registered for a customer...",
-        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
-        "page_number": 1,
-        "line_number": 24
-      },
-      {
-        "requirement_id": "FR015",
-        "requirement_text": "System shall capture and associate registered student details under the customer's Relationship Information Management (RIM).",
-        "original_text": "...and the student details provided should be captured under the customer RIM.",
-        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
-        "page_number": 1,
-        "line_number": 24
-      },
-      {
-        "requirement_id": "FR016",
-        "requirement_text": "System shall allow modification of registered student details.",
-        "original_text": "Student details can be modified or de-registered from the registered student list.",
-        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
-        "page_number": 1,
-        "line_number": 26
-      },
-      {
-        "requirement_id": "FR017",
-        "requirement_text": "System shall allow de-registration of students from the registered student list.",
-        "original_text": "Student details can be modified or de-registered from the registered student list.",
-        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
-        "page_number": 1,
-        "line_number": 26
-      },
-      {
-        "requirement_id": "FR018",
-        "requirement_text": "System shall send an SMS notification to the customer upon successful student registration.",
-        "original_text": "SMS should be sent to customer during student registration / amendment / de-registration of a student. SMS should be in a predefined format with Student ID, Student Name and School Name.",
-        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
-        "page_number": 1,
-        "line_number": 27
-      },
-      {
-        "requirement_id": "FR019",
-        "requirement_text": "System shall send an SMS notification to the customer upon successful student amendment.",
-        "original_text": "SMS should be sent to customer during student registration / amendment / de-registration of a student. SMS should be in a predefined format with Student ID, Student Name and School Name.",
-        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
-        "page_number": 1,
-        "line_number": 27
-      },
-      {
-        "requirement_id": "FR020",
-        "requirement_text": "System shall send an SMS notification to the customer upon successful student de-registration.",
-        "original_text": "SMS should be sent to customer during student registration / amendment / de-registration of a student. SMS should be in a predefined format with Student ID, Student Name and School Name.",
-        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
-        "page_number": 1,
-        "line_number": 27
-      },
-      {
-        "requirement_id": "FR021",
-        "requirement_text": "SMS notifications for student registration, amendment, and de-registration shall be in a predefined format including Student ID, Student Name, and School Name.",
-        "original_text": "SMS should be sent to customer during student registration / amendment / de-registration of a student. SMS should be in a predefined format with Student ID, Student Name and School Name.",
-        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
-        "page_number": 1,
-        "line_number": 27
-      },
-      {
-        "requirement_id": "FR022",
-        "requirement_text": "Online Banking portal shall include a new option for Student Registration.",
-        "original_text": "New option should be provided in online banking / mobile banking for Student Registration/ Student Deregistration",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 1,
-        "line_number": 29
-      },
-      {
-        "requirement_id": "FR023",
-        "requirement_text": "Online Banking portal shall include a new option for Student De-registration.",
-        "original_text": "New option should be provided in online banking / mobile banking for Student Registration/ Student Deregistration",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 1,
-        "line_number": 29
-      },
-      {
-        "requirement_id": "FR024",
-        "requirement_text": "Mobile Banking application shall include a new option for Student Registration.",
-        "original_text": "New option should be provided in online banking / mobile banking for Student Registration/ Student Deregistration",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 1,
-        "line_number": 29
-      },
-      {
-        "requirement_id": "FR025",
-        "requirement_text": "Mobile Banking application shall include a new option for Student De-registration.",
-        "original_text": "New option should be provided in online banking / mobile banking for Student Registration/ Student Deregistration",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 1,
-        "line_number": 29
-      },
-      {
-        "requirement_id": "FR026",
-        "requirement_text": "Student registration process shall capture 'Student Name' as a mandatory detail.",
-        "original_text": "Following basic details are mandatory and have to be captured in student registration process - Student Name",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 1,
-        "line_number": 30
-      },
-      {
-        "requirement_id": "FR027",
-        "requirement_text": "Student registration process shall capture 'Student ID Number' as a mandatory detail.",
-        "original_text": "- Student ID Number**",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 1,
-        "line_number": 32
-      },
-      {
-        "requirement_id": "FR028",
-        "requirement_text": "Student registration process shall capture 'School Name with Location' as a mandatory detail.",
-        "original_text": "- School Name with Location (dropdown list with registered schools)",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 1,
-        "line_number": 33
-      },
-      {
-        "requirement_id": "FR029",
-        "requirement_text": "The 'School Name with Location' field in student registration shall be a dropdown list populated with registered schools.",
-        "original_text": "(dropdown list with registered schools)",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 1,
-        "line_number": 33
-      },
-      {
-        "requirement_id": "FR030",
-        "requirement_text": "Student ID Number shall be entered twice for verification during student registration via Online/Mobile Banking.",
-        "original_text": "Student ID Number has to be entered twice for verification purpose.",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 1,
-        "line_number": 34
-      },
-      {
-        "requirement_id": "FR031",
-        "requirement_text": "Student registration via Online/Mobile Banking shall require OTP validation for authentication.",
-        "original_text": "Student registration / maintenance should be authenticated via OTP validation",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 1,
-        "line_number": 35
-      },
-      {
-        "requirement_id": "FR032",
-        "requirement_text": "Student maintenance (amendment/de-registration) via Online/Mobile Banking shall require OTP validation for authentication.",
-        "original_text": "Student registration / maintenance should be authenticated via OTP validation",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 1,
-        "line_number": 35
-      },
-      {
-        "requirement_id": "FR033",
-        "requirement_text": "Customer authentication via IVR TIN number shall be required to access Contact Center services for school fee payment.",
+        "requirement_text": "Customer shall authenticate themselves with IVR TIN number when calling the Contact Center for school fee payment services.",
         "original_text": "Customer calls the Contact center and authenticate himself with IVR TIN number",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
         "page_number": 1,
-        "line_number": 40
+        "line_number": 40,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR034",
-        "requirement_text": "IVR system shall include a 'School Fee Payment' option under the credit card section.",
+        "requirement_id": "FR015",
+        "requirement_text": "A new 'School Fee Payment' option shall be available under the credit card section in the IVR menu.",
         "original_text": "New option, School Fee Payment will be available under credit card section.",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
         "page_number": 1,
-        "line_number": 41
+        "line_number": 41,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR035",
-        "requirement_text": "Upon selecting 'School Fee Payment' in IVR, the system shall offer 'Student Registration' and 'Fee Payment' options.",
+        "requirement_id": "FR016",
+        "requirement_text": "Upon selecting 'School Fee Payment' in IVR, the customer shall be provided with two options: 'Student Registration' and 'Fee Payment'.",
         "original_text": "Once the \u201cSchool Fee Payment\u201d is selected, customer should be provided with two options \u2013 \u201cStudent Registration\u201d and \u201cFee Payment\u201d.",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
         "page_number": 1,
-        "line_number": 42
+        "line_number": 42,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR036",
-        "requirement_text": "Selecting 'Student Registration' in IVR shall redirect the customer to a Contact Center agent.",
-        "original_text": "When \u201cStudent Registration\u201d is selected from the options, Customer is redirected to Contact Center agent.",
+        "requirement_id": "FR017",
+        "requirement_text": "When 'Student Registration' is selected via IVR, the customer shall be redirected to a Contact Center agent who will check and verify the customer's RIM number.",
+        "original_text": "When \u201cStudent Registration\u201d is selected from the options, Customer is redirected to Contact Center agent. Agent checks and verifies the RIM number of the customer.",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
         "page_number": 2,
-        "line_number": 43
+        "line_number": 43,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR037",
-        "requirement_text": "System shall provide a new E-Form for Contact Center agents to manage student registration, amendment, and de-registration.",
+        "requirement_id": "FR018",
+        "requirement_text": "Contact Center agents shall open a new E-Form to enable Registration/Amendment/De-Registration of students.",
         "original_text": "Agent opens the new E-Form introduced as part of this requirement to enable Registration / Amendment / De-Registration of student.",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
         "page_number": 2,
-        "line_number": 44
+        "line_number": 44,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR038",
-        "requirement_text": "The E-Form shall display a list of previously registered students for the customer.",
+        "requirement_id": "FR019",
+        "requirement_text": "Contact Center agents shall manually copy the RIM Number or Card number from IVR to the E-Form.",
+        "original_text": "The RIM Number or Card number available in IVR has to be copied manually by the agent to the E-Form.",
+        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
+        "page_number": 2,
+        "line_number": 45,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Contact Center Agent"
+        ]
+      },
+      {
+        "requirement_id": "FR020",
+        "requirement_text": "The E-Form for student registration shall list previously registered students if available.",
         "original_text": "The E-Form should also list the previously registered students if available.",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
         "page_number": 2,
-        "line_number": 46
+        "line_number": 46,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR039",
-        "requirement_text": "Contact Center agent (via E-Form) shall capture student details for new registrations.",
+        "requirement_id": "FR021",
+        "requirement_text": "For first-time users or new student registration requests via E-Form, the customer shall provide student details for the registration process.",
         "original_text": "If it is a first time user or a new student registration request, customer is requested to provide the student details for student registration process.",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
         "page_number": 2,
-        "line_number": 47
+        "line_number": 47,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR040",
-        "requirement_text": "Contact Center agent (via E-Form) shall be able to select a student from the existing registered student list for modification or de-registration.",
+        "requirement_id": "FR022",
+        "requirement_text": "For amendment or de-register student requests via E-Form, the Contact Center agent shall be able to select a student from the existing registered student list and modify or deregister them.",
         "original_text": "If it is a Amendment / De-Register Student request from customer, Contact Center agent should be able to select a student from the existing registered student list and modify or deregister on the E-Form.",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
         "page_number": 2,
-        "line_number": 48
+        "line_number": 48,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR041",
-        "requirement_text": "The 'De-Register' button on the E-Form shall be disabled by default.",
-        "original_text": "De-Register button should be on disabled mode by default...",
+        "requirement_id": "FR023",
+        "requirement_text": "The 'De-Register' button on the E-Form shall be disabled by default and enabled only upon selecting a registered student.",
+        "original_text": "De-Register button should be on disabled mode by default and shall be enabled only on selecting a registered student from the list.",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
         "page_number": 2,
-        "line_number": 48
+        "line_number": 48,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR042",
-        "requirement_text": "The 'De-Register' button on the E-Form shall be enabled only upon selection of a registered student from the list.",
-        "original_text": "...and shall be enabled only on selecting a registered student from the list.",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
-        "page_number": 2,
-        "line_number": 48
-      },
-      {
-        "requirement_id": "FR043",
-        "requirement_text": "System shall allow registering multiple students within a single call session via Contact Center E-Form.",
+        "requirement_id": "FR024",
+        "requirement_text": "Customer shall be able to register more than one student on the same call via Contact Center.",
         "original_text": "Customer can register more than one student on the same call.",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
         "page_number": 2,
-        "line_number": 49
+        "line_number": 49,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR044",
-        "requirement_text": "System shall present options to register or modify another student after each successful student registration or de-registration via E-Form.",
+        "requirement_id": "FR025",
+        "requirement_text": "An option to register or modify students shall be available after each student registration or de-registration.",
         "original_text": "Option to register or modify should be available after each student registration or de-registration.",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
         "page_number": 2,
-        "line_number": 49
+        "line_number": 49,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR045",
-        "requirement_text": "System shall provide an option for the customer to proceed directly to Fee Payment on the same call session.",
+        "requirement_id": "FR026",
+        "requirement_text": "Customer shall have an option to proceed for Fee Payment on the same call, and the Contact Center agent shall refer such requests to the 'Fee Payment' option in IVR.",
         "original_text": "Customer should have an option to proceed for Fee Payment on the same call and Contact Center agent should refer those reuqests to \u201cFee Payment\u201d option in IVR.",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA E-FORM [Contact Center Agent]",
         "page_number": 2,
-        "line_number": 50
+        "line_number": 50,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR046",
-        "requirement_text": "System shall allow the customer to select the desired fee type for payment.",
+        "requirement_id": "FR027",
+        "requirement_text": "Payment shall be possible via Online Banking, Mobile Banking, and IVR.",
+        "original_text": "Payment can be done thru three options - Via Online Banking - Via Mobile Banking - Via IVR",
+        "source_section": "C) FEE PAYMENT",
+        "page_number": 2,
+        "line_number": 53,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
+      },
+      {
+        "requirement_id": "FR028",
+        "requirement_text": "System shall provide an option to convert fee payments to Installments (EPP).",
+        "original_text": "Option should be there to convert the Fee payment to Installments [EPP].",
+        "source_section": "C) FEE PAYMENT",
+        "page_number": 2,
+        "line_number": 58,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
+      },
+      {
+        "requirement_id": "FR029",
+        "requirement_text": "Customer shall have an option to select the credit card for payment from a list if multiple active cards are available.",
+        "original_text": "customer will have an option to select the credit card from the list (if multiple cards are available)",
+        "source_section": "C) FEE PAYMENT",
+        "page_number": 2,
+        "line_number": 59,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
+      },
+      {
+        "requirement_id": "FR030",
+        "requirement_text": "Customer shall be able to select the type of fee they want to pay.",
         "original_text": "Customer can select the type of fee he wants to pay.",
         "source_section": "C) FEE PAYMENT",
         "page_number": 2,
-        "line_number": 60
+        "line_number": 60,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR047",
-        "requirement_text": "System shall maintain logs of all previous fee payment transactions.",
+        "requirement_id": "FR031",
+        "requirement_text": "System shall display previous transaction logs and details with a unique reference number and description.",
         "original_text": "System should maintain previous transaction logs and transaction details with unique reference number and description.",
         "source_section": "C) FEE PAYMENT",
         "page_number": 2,
-        "line_number": 62
+        "line_number": 62,
+        "confidence_score": 0.95,
+        "stakeholders": [
+          "Customer",
+          "End-user",
+          "Admin"
+        ]
       },
       {
-        "requirement_id": "FR048",
-        "requirement_text": "System shall store transaction details including a unique reference number and description for each payment.",
-        "original_text": "System should maintain previous transaction logs and transaction details with unique reference number and description.",
-        "source_section": "C) FEE PAYMENT",
-        "page_number": 2,
-        "line_number": 63
-      },
-      {
-        "requirement_id": "FR049",
-        "requirement_text": "System shall send a confirmation SMS to the customer upon successful fee payment.",
+        "requirement_id": "FR032",
+        "requirement_text": "Confirmation SMS shall be sent to the customer on successful payment and EPP conversion.",
         "original_text": "Confirmation SMS should be sent out to customer on successful payment and EPP conversion with the payment details [Student Name, School name, Fee Type and the Amount].",
         "source_section": "C) FEE PAYMENT",
         "page_number": 2,
-        "line_number": 64
+        "line_number": 64,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR050",
-        "requirement_text": "System shall send a confirmation SMS to the customer upon successful EPP conversion.",
+        "requirement_id": "FR032-a",
+        "requirement_text": "The confirmation SMS for payment and EPP conversion shall include Student Name, School name, Fee Type, and Amount.",
         "original_text": "Confirmation SMS should be sent out to customer on successful payment and EPP conversion with the payment details [Student Name, School name, Fee Type and the Amount].",
         "source_section": "C) FEE PAYMENT",
         "page_number": 2,
-        "line_number": 64
+        "line_number": 64,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user",
+          "Product Owner"
+        ]
       },
       {
-        "requirement_id": "FR051",
-        "requirement_text": "Confirmation SMS for payment and EPP conversion shall include Student Name, School Name, Fee Type, and the Amount, in a specific format.",
-        "original_text": "Confirmation SMS should be sent out to customer on successful payment and EPP conversion with the payment details [Student Name, School name, Fee Type and the Amount].",
-        "source_section": "C) FEE PAYMENT",
-        "page_number": 2,
-        "line_number": 64
-      },
-      {
-        "requirement_id": "FR052",
-        "requirement_text": "Online Banking portal shall include a new option for School Fee Payment.",
+        "requirement_id": "FR033",
+        "requirement_text": "Online and Mobile Banking portals shall provide a new option for school fee payment.",
         "original_text": "New option should be provided in online / mobile banking portal for school fee payment.",
         "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 2,
-        "line_number": 66
+        "line_number": 66,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR053",
-        "requirement_text": "Mobile Banking application shall include a new option for School Fee Payment.",
-        "original_text": "New option should be provided in online / mobile banking portal for school fee payment.",
+        "requirement_id": "FR034",
+        "requirement_text": "Customer shall log in to Online Banking/Mobile Banking and select the new School Fee Payment option.",
+        "original_text": "Customer logs in to online banking / mobile banking and selects the new option provided for School Fee Payment.",
         "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 2,
-        "line_number": 66
+        "line_number": 67,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR054",
-        "requirement_text": "System shall display a dropdown list of available credit cards for payment.",
-        "original_text": "Customer can choose a credit card from the dropdown list.",
-        "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 2,
-        "line_number": 68
-      },
-      {
-        "requirement_id": "FR055",
-        "requirement_text": "System shall display the available balance of the selected credit card.",
+        "requirement_id": "FR035",
+        "requirement_text": "When a credit card is selected from the dropdown list, its available balance shall be displayed.",
         "original_text": "Available balance should be shown when a credit card is selected.",
         "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 2,
-        "line_number": 68
+        "line_number": 68,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR056",
-        "requirement_text": "System shall display a dropdown selection of registered students associated with the customer's RIM.",
+        "requirement_id": "FR036",
+        "requirement_text": "Registered students under the customer's RIM and different fee types for the selected school shall be displayed in a dropdown selection.",
         "original_text": "Registered students under the customer RIM and different types of fees registered for the selected school should be displayed in a dropdown selection.",
         "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 2,
-        "line_number": 69
+        "line_number": 69,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR057",
-        "requirement_text": "System shall display a dropdown selection of fee types registered for the selected school.",
-        "original_text": "Registered students under the customer RIM and different types of fees registered for the selected school should be displayed in a dropdown selection.",
-        "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 2,
-        "line_number": 69
-      },
-      {
-        "requirement_id": "FR058",
-        "requirement_text": "System shall allow the customer to select a student from the dropdown for payment.",
+        "requirement_id": "FR037",
+        "requirement_text": "Customer shall be able to select the student and fee type from a dropdown, add the amount, and remarks (maximum 20 characters).",
         "original_text": "Customer can select the student, fee type from the dropdown and add the amount, remarks(Max 20 characters).",
         "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 2,
-        "line_number": 70
+        "line_number": 70,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR059",
-        "requirement_text": "System shall allow the customer to select a fee type from the dropdown for payment.",
-        "original_text": "Customer can select the student, fee type from the dropdown and add the amount, remarks(Max 20 characters).",
-        "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 2,
-        "line_number": 70
-      },
-      {
-        "requirement_id": "FR060",
-        "requirement_text": "System shall allow the customer to input the payment amount.",
-        "original_text": "Customer can select the student, fee type from the dropdown and add the amount, remarks(Max 20 characters).",
-        "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 2,
-        "line_number": 70
-      },
-      {
-        "requirement_id": "FR061",
-        "requirement_text": "System shall allow the customer to input remarks (maximum 20 characters).",
-        "original_text": "Customer can select the student, fee type from the dropdown and add the amount, remarks(Max 20 characters).",
-        "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 2,
-        "line_number": 70
-      },
-      {
-        "requirement_id": "FR062",
-        "requirement_text": "System shall provide an option to convert items from the payment list to EPP.",
+        "requirement_id": "FR038",
+        "requirement_text": "From the payment list, the customer shall have an option to convert the payment to EPP.",
         "original_text": "From the payment list, customer should have an option to convert the payment to EPP.",
         "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 2,
-        "line_number": 71
+        "line_number": 71,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR063",
-        "requirement_text": "System shall allow individual payments from the list to be selected for EPP conversion with plan details.",
+        "requirement_id": "FR039",
+        "requirement_text": "Customer shall be able to select individual payments from the list for EPP conversion with the plan details.",
         "original_text": "Customer can select individual payment from the list for EPP conversion with the plan details.",
         "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 2,
-        "line_number": 72
+        "line_number": 72,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR064",
-        "requirement_text": "System shall automatically create an E-form service request for each EPP selected transaction.",
+        "requirement_id": "FR040",
+        "requirement_text": "An E-form Service request with transaction information (unique reference number & card ID) shall be created and assigned to Card Centre separately for each EPP selected transaction.",
         "original_text": "An E-form Service request with the Transaction information should be created (using unique ref no & card id) and assigned to Card Centre separately for each EPP selected transactions in the list.",
         "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 2,
-        "line_number": 73
+        "line_number": 73,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Cards Centre",
+          "Operations Team"
+        ]
       },
       {
-        "requirement_id": "FR065",
-        "requirement_text": "E-form service requests for EPP shall include transaction information (unique reference number and card ID).",
-        "original_text": "An E-form Service request with the Transaction information should be created (using unique ref no & card id) and assigned to Card Centre separately for each EPP selected transactions in the list.",
-        "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 2,
-        "line_number": 73
-      },
-      {
-        "requirement_id": "FR066",
-        "requirement_text": "E-form service requests for EPP shall be assigned to the Card Centre.",
-        "original_text": "An E-form Service request with the Transaction information should be created (using unique ref no & card id) and assigned to Card Centre separately for each EPP selected transactions in the list.",
-        "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
-        "page_number": 2,
-        "line_number": 73
-      },
-      {
-        "requirement_id": "FR067",
-        "requirement_text": "System shall allow initiation and processing of payments for multiple students concurrently.",
+        "requirement_id": "FR041",
+        "requirement_text": "Payment for more than one student can be initiated or processed together.",
         "original_text": "Payment for more than one student can be initiated or processed together.",
         "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 2,
-        "line_number": 75
+        "line_number": 75,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user",
+          "NGB (Bank)"
+        ]
       },
       {
-        "requirement_id": "FR068",
-        "requirement_text": "System shall display a history of fee payments for the last 6 months.",
-        "original_text": "Last 6 month history of fee payment should be available in the system.",
+        "requirement_id": "FR042",
+        "requirement_text": "Confirmation SMS shall be sent to the customer on successful School fee Payment.",
+        "original_text": "Confirmation SMS should be sent out to customer on successful School fee Payment.",
         "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 2,
-        "line_number": 78
+        "line_number": 77,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR069",
-        "requirement_text": "IVR system shall provide options to select school, student, and school fee type for payment.",
+        "requirement_id": "FR042-a",
+        "requirement_text": "The confirmation SMS for School fee Payment shall be in a specific format and contain transaction details (School Name, Student Name, amount, and Fee Type).",
+        "original_text": "SMS should be in specific format and should contain the transaction details (School Name, Student Name, amount and the Fee Type)",
+        "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
+        "page_number": 2,
+        "line_number": 77,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user",
+          "Product Owner"
+        ]
+      },
+      {
+        "requirement_id": "FR043",
+        "requirement_text": "When the 'Fee Payment' option is selected via IVR, the customer shall be provided with options to select school, student, and school fee type.",
         "original_text": "Once fee payment option is selected, customer will be provided with the options to select school, student and school fee type.",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 2,
-        "line_number": 86
+        "line_number": 86,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR070",
-        "requirement_text": "IVR system shall voice out student IDs for selection during payment.",
+        "requirement_id": "FR044",
+        "requirement_text": "For student selection in IVR, the IVR shall voice out the student ID, and the customer shall make a selection to identify the student for payment.",
         "original_text": "Select Student- IVR to voice out the student ID and customer to make selection for identifying the student for payment.",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 88
+        "line_number": 88,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR071",
-        "requirement_text": "IVR system shall provide menu options for customers to choose the type of fee (e.g., tuition fee, bus fee, other fee).",
+        "requirement_id": "FR045",
+        "requirement_text": "For fee type selection in IVR, the IVR shall provide menu options for choosing the type of fee (e.g., tuition fee, bus fee, other fee).",
         "original_text": "Select Type of Fee- IVR to provide menu options to customer for choosing the type of fee that customer wants to pay e.g., tuition fee, bus fee, other fee",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 89
+        "line_number": 89,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR072",
-        "requirement_text": "IVR system shall allow the customer to enter the payment amount.",
+        "requirement_id": "FR046",
+        "requirement_text": "Customer shall enter the amount to be paid via IVR.",
         "original_text": "Enter Amount-Customer to enter the amount to be paid",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 90
+        "line_number": 90,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR073",
-        "requirement_text": "IVR system shall provide an option to make another payment for the same student or a different student.",
+        "requirement_id": "FR047",
+        "requirement_text": "After payment is done via IVR, an SMS shall be sent to the customer.",
+        "original_text": "Payment done and SMS sent to the customer",
+        "source_section": "FEE PAYMENT VIA IVR",
+        "page_number": 3,
+        "line_number": 91,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
+      },
+      {
+        "requirement_id": "FR048",
+        "requirement_text": "IVR shall provide a menu option to the customer to make another payment for the same student or another student.",
         "original_text": "Provide Menu option to the customer to make another payment for the same student or another student.",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 92
+        "line_number": 92,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR074",
-        "requirement_text": "IVR system shall provide an option to convert completed transactions into EPP after all payments are done.",
+        "requirement_id": "FR049",
+        "requirement_text": "Once all payments are done via IVR, the customer shall be provided an option to convert the transactions into EPP.",
         "original_text": "Once all payments are done customer to be provided an option to convert the transactions into EPP.",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 92
+        "line_number": 92,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR075",
-        "requirement_text": "If a customer opts for EPP via IVR, the call shall be transferred to a Contact Center agent.",
+        "requirement_id": "FR050",
+        "requirement_text": "If a customer opts for EPP via IVR, the call shall be transferred to an agent for initiating the EPP request.",
         "original_text": "If customer opts for EPP call will be transferred to an agent for initating the EPP request.",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 92
+        "line_number": 92,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "Contact Center Agent"
+        ]
       },
       {
-        "requirement_id": "FR076",
-        "requirement_text": "ICRS (Integrated Customer Relationship System) shall be updated with registered student details.",
+        "requirement_id": "FR051",
+        "requirement_text": "ICRS shall be updated with students registered and payments done by the customer, including details.",
         "original_text": "ICRS to be updated with students registered and payments done by the customer with details",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 93
+        "line_number": 93,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "NGB (Bank)",
+          "Operations Team"
+        ]
       },
       {
-        "requirement_id": "FR077",
-        "requirement_text": "ICRS shall be updated with customer payment details.",
-        "original_text": "ICRS to be updated with students registered and payments done by the customer with details",
+        "requirement_id": "FR052",
+        "requirement_text": "Daily Payment limits on IVR and OTP options for payment shall be configurable by business, if required.",
+        "original_text": "Daily Payment limit on IVR and OTP options for payment to be configurable by business,if required.",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 93
+        "line_number": 94,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Product Owner",
+          "Admin",
+          "Operations Team"
+        ]
       },
       {
-        "requirement_id": "FR078",
-        "requirement_text": "Contact Center agent shall create an E-Form for each IVR payment transaction.",
-        "original_text": "Contact Center agent will create an E-Form (for each transaction)...",
+        "requirement_id": "FR053",
+        "requirement_text": "Payment will be initiated by the IVR using details provided by the customer.",
+        "original_text": "Payment will be initiated by the IVR with the details provided by customer.",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 96
+        "line_number": 95,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "NGB (Bank)"
+        ]
       },
       {
-        "requirement_id": "FR079",
-        "requirement_text": "Contact Center agent shall record authorization details from Vision Plus on the E-Form.",
-        "original_text": "...siting the authorization in Vision Plus",
+        "requirement_id": "FR054",
+        "requirement_text": "Contact Center agents shall create an E-Form for each transaction, citing the authorization in Vision Plus.",
+        "original_text": "Contact Center agent will create an E-Form (for each transaction), siting the authorization in Vision Plus",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 96
+        "line_number": 96,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Contact Center Agent",
+          "Operations Team"
+        ]
       },
       {
-        "requirement_id": "FR080",
-        "requirement_text": "E-Forms created by Contact Center agents shall be queued in a Contact Center specific queue.",
+        "requirement_id": "FR055",
+        "requirement_text": "The E-Form created by the agent shall be queued in the Contact Center queue until the transaction is posted.",
         "original_text": "The E-Form created will be queued in Contact Center queue until the transaction is posted (max of 2 days).",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 97
+        "line_number": 97,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Contact Center Agent",
+          "Operations Team"
+        ]
       },
       {
-        "requirement_id": "FR081",
-        "requirement_text": "E-Forms shall be verified by the Contact Center after transaction posting.",
+        "requirement_id": "FR056",
+        "requirement_text": "Once the transaction is posted, the E-Form created by the agent shall be verified at the Contact Center before being sent to the cards center for processing.",
         "original_text": "Once the transaction is posted, the E-Form created by agent will be verified at Contact Center itself before it is sent to cards center for processing.",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 98
+        "line_number": 98,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Contact Center Agent",
+          "Cards Centre"
+        ]
       },
       {
-        "requirement_id": "FR082",
-        "requirement_text": "E-Forms shall be sent to the Cards Center for processing only after Contact Center verification.",
-        "original_text": "Once the transaction is posted, the E-Form created by agent will be verified at Contact Center itself before it is sent to cards center for processing.",
-        "source_section": "FEE PAYMENT VIA IVR",
-        "page_number": 3,
-        "line_number": 98
-      },
-      {
-        "requirement_id": "FR083",
-        "requirement_text": "If EPP option is not selected, the IVR call shall conclude with payment confirmation details.",
+        "requirement_id": "FR057",
+        "requirement_text": "If the EPP option is not selected, the call shall end with confirmation of payment details.",
         "original_text": "If EPP option is not selected, call is ended with the confirmation of the payment details.",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 99
+        "line_number": 99,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
-        "requirement_id": "FR084",
-        "requirement_text": "System shall debit the customer's credit card for individual fees.",
-        "original_text": "When customer initiates a payment, amount should be debited individually from the customer\u2019s credit card...",
+        "requirement_id": "FR058",
+        "requirement_text": "Confirmation SMS shall be sent to the customer on successful School fee Payment in a specific format with payment details (school name, student name, and school fee type).",
+        "original_text": "Confirmation SMS should be sent out to customer on successful School fee Payment in specific format with payment details (school name, student name and school fee type).",
+        "source_section": "FEE PAYMENT VIA IVR",
+        "page_number": 3,
+        "line_number": 100,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
+      },
+      {
+        "requirement_id": "FR059",
+        "requirement_text": "When a customer initiates a payment, the amount shall be debited individually from the customer\u2019s credit card.",
+        "original_text": "When customer initiates a payment, amount should be debited individually from the customer\u2019s credit card",
         "source_section": "FEE POSTING",
         "page_number": 3,
-        "line_number": 103
+        "line_number": 103,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "NGB (Bank)"
+        ]
       },
       {
-        "requirement_id": "FR084-a",
-        "requirement_text": "Debit description for customer credit card shall be '< SCHOOL NAME > -< FEE TYPE > - < STUDENT ID NUMBER>'.",
-        "original_text": "- Debit Customer Credit card for individual fee with description as < SCHOOL NAME > -< FEE TYPE > - < STUDENT ID NUMBER>",
+        "requirement_id": "FR060",
+        "requirement_text": "The amount shall be credited individually to the registered school\u2019s account.",
+        "original_text": "credited individually to the registered school\u2019s account.",
         "source_section": "FEE POSTING",
         "page_number": 3,
-        "line_number": 104
+        "line_number": 103,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "School",
+          "NGB (Bank)"
+        ]
       },
       {
-        "requirement_id": "FR085",
-        "requirement_text": "System shall debit the NGB GL account (configured for school fee payment) in the Corebanking System.",
-        "original_text": "- Debit GL account [Separate for Visa Conventional, Visa Islamic & MasterCard] (configured for school fee payment) for individual fee in Corebanking System with description as \u201cSchool Pymt-cardid-<UNIQUE REF NUMBER>\u201d",
+        "requirement_id": "FR061",
+        "requirement_text": "Debit Customer Credit card for individual fee with description as < SCHOOL NAME > -< FEE TYPE > - < STUDENT ID NUMBER>.",
+        "original_text": "Debit Customer Credit card for individual fee with description as < SCHOOL NAME > -< FEE TYPE > - < STUDENT ID NUMBER>",
         "source_section": "FEE POSTING",
         "page_number": 3,
-        "line_number": 105
+        "line_number": 104,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "NGB (Bank)",
+          "Customer"
+        ]
       },
       {
-        "requirement_id": "FR085-a",
-        "requirement_text": "Separate GL accounts shall be used for Visa Conventional, Visa Islamic, and MasterCard debits.",
-        "original_text": "[Separate for Visa Conventional, Visa Islamic & MasterCard]",
+        "requirement_id": "FR062",
+        "requirement_text": "Debit GL account (separate for Visa Conventional, Visa Islamic & MasterCard) for individual fee in Corebanking System with description as \u201cSchool Pymt-cardid-<UNIQUE REF NUMBER>\u201d.",
+        "original_text": "Debit GL account [Separate for Visa Conventional, Visa Islamic & MasterCard] (configured for school fee payment) for individual fee in Corebanking System with description as \u201cSchool Pymt-cardid-<UNIQUE REF NUMBER>\u201d",
         "source_section": "FEE POSTING",
         "page_number": 3,
-        "line_number": 105
+        "line_number": 105,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "NGB (Bank)",
+          "Operations Team"
+        ]
       },
       {
-        "requirement_id": "FR085-b",
-        "requirement_text": "Debit description for GL account shall be 'School Pymt-cardid-<UNIQUE REF NUMBER>'.",
-        "original_text": "description as \u201cSchool Pymt-cardid-<UNIQUE REF NUMBER>\u201d",
+        "requirement_id": "FR063",
+        "requirement_text": "Credit to School Account for individual fee payments in Corebanking System with description as \u201c< STUDENT ID NUMBER>- < FEE TYPE > -<UNIQUE REF NUMBER>\u201d.",
+        "original_text": "Credit to School Account for individual fee payments in Corebanking System with description as \u201c< STUDENT ID NUMBER>- < FEE TYPE > -<UNIQUE REF NUMBER>\u201d",
         "source_section": "FEE POSTING",
         "page_number": 3,
-        "line_number": 105
+        "line_number": 106,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "NGB (Bank)",
+          "School"
+        ]
       },
       {
-        "requirement_id": "FR086",
-        "requirement_text": "System shall credit the School Account in the Corebanking System for individual fee payments.",
-        "original_text": "- Credit to School Account for individual fee payments in Corebanking System with description as \u201c< STUDENT ID NUMBER>- < FEE TYPE > -<UNIQUE REF NUMBER>\u201d",
-        "source_section": "FEE POSTING",
-        "page_number": 3,
-        "line_number": 106
-      },
-      {
-        "requirement_id": "FR086-a",
-        "requirement_text": "Credit description for School Account shall be '< STUDENT ID NUMBER>- < FEE TYPE > -<UNIQUE REF NUMBER>'.",
-        "original_text": "description as \u201c< STUDENT ID NUMBER>- < FEE TYPE > -<UNIQUE REF NUMBER>\u201d",
-        "source_section": "FEE POSTING",
-        "page_number": 3,
-        "line_number": 106
-      },
-      {
-        "requirement_id": "FR087",
-        "requirement_text": "System shall truncate or trim parameters in transaction descriptions to meet the 40-character maximum length constraint.",
-        "original_text": "Some of the parameters in description should be trimmed off to meet the maximum length constraint.",
-        "source_section": "FEE POSTING",
-        "page_number": 3,
-        "line_number": 107
-      },
-      {
-        "requirement_id": "FR088",
-        "requirement_text": "System shall utilize a new transaction code for school fee payment postings.",
+        "requirement_id": "FR064",
+        "requirement_text": "A new transaction code shall be used for transaction postings.",
         "original_text": "New transaction code shall be used for the transaction postings.",
-        "source_section": "Note",
+        "source_section": "Note:",
         "page_number": 3,
-        "line_number": 109
+        "line_number": 109,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "NGB (Bank)",
+          "Operations Team"
+        ]
       },
       {
-        "requirement_id": "FR089",
-        "requirement_text": "System shall allow external school websites to link to the NGB Online Banking login page, directly providing an option for school fee payment post-login.",
+        "requirement_id": "FR065",
+        "requirement_text": "School website can have a 'School Fee Payment' link that opens the Online Banking login page with an option for school fee payment.",
         "original_text": "School website can have a \u2018School Fee Payment\u2019 link on their website which should open a the login page in Online banking with an option for school fee payment.",
-        "source_section": "Note",
+        "source_section": "Note:",
         "page_number": 3,
-        "line_number": 110
+        "line_number": 110,
+        "confidence_score": 0.9,
+        "stakeholders": [
+          "School",
+          "Customer",
+          "IT/Vendor"
+        ]
       },
       {
-        "requirement_id": "FR090",
-        "requirement_text": "System shall automatically generate an Excel file containing payment details for schools on the day following payment.",
+        "requirement_id": "FR066",
+        "requirement_text": "An excel file shall be generated and sent via email to the school on the next day of payment.",
         "original_text": "On the next day of payment, an excel file should be generated and sent via email to the school with below details.",
-        "source_section": "Note",
+        "source_section": "FEE POSTING",
         "page_number": 3,
-        "line_number": 119
+        "line_number": 119,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "School",
+          "NGB (Bank)"
+        ]
       },
       {
-        "requirement_id": "FR091",
-        "requirement_text": "System shall automatically send the Excel file via email to the school's configured distribution list.",
+        "requirement_id": "FR066-a",
+        "requirement_text": "The email for the daily payment report shall be triggered automatically to a configured distribution list.",
         "original_text": "The mail should be triggered automatically to the configured distribution list.",
-        "source_section": "Note",
+        "source_section": "FEE POSTING",
         "page_number": 3,
-        "line_number": 119
+        "line_number": 119,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "School",
+          "Admin",
+          "DevOps"
+        ]
       },
       {
-        "requirement_id": "FR092",
-        "requirement_text": "System shall generate separate Excel files for each school if multiple schools have received payments.",
+        "requirement_id": "FR066-b",
+        "requirement_text": "The excel file for the daily payment report shall be generated separately if multiple schools are available.",
         "original_text": "The file should be generated separately if multiple schools are available.",
-        "source_section": "Note",
+        "source_section": "FEE POSTING",
         "page_number": 3,
-        "line_number": 119
+        "line_number": 119,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "School",
+          "NGB (Bank)"
+        ]
       },
       {
-        "requirement_id": "FR093",
-        "requirement_text": "The Excel file shall contain: School Name with location, Student ID, Student Name, Amount, Transaction date, and Payment Remarks.",
-        "original_text": "- School Name with location\n- Student ID\n- Student Name\n- Amount\n- Transaction date\n- Payment Remarks [value entered by the customer in the Remarks field in Fee Payment page]",
-        "source_section": "Note",
+        "requirement_id": "FR066-c",
+        "requirement_text": "The daily payment excel file shall include School Name with location, Student ID, Student Name, Amount, Transaction date, and Payment Remarks (value entered by the customer in the Remarks field).",
+        "original_text": "- School Name with location - Student ID - Student Name - Amount - Transaction date - Payment Remarks [value entered by the customer in the Remarks field in Fee Payment page]",
+        "source_section": "FEE POSTING",
         "page_number": 3,
-        "line_number": 120
+        "line_number": 120,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "School",
+          "NGB (Bank)",
+          "Product Owner"
+        ]
       },
       {
-        "requirement_id": "FR094",
-        "requirement_text": "System shall notify the customer via SMS if an EPP request is rejected due to insufficient balance.",
-        "original_text": "If sufficient balance is not available during EPP conversion (due to other payment settlement or auto debit), the EPP request should be rejected and customer should be notified via SMS in a specific format with sufficient details.",
+        "requirement_id": "FR067",
+        "requirement_text": "If sufficient balance is not available during EPP conversion, the EPP request should be rejected.",
+        "original_text": "If sufficient balance is not available during EPP conversion (due to other payment settlement or auto debit), the EPP request should be rejected",
         "source_section": "ASSUMPTIONS",
         "page_number": 3,
-        "line_number": 133
+        "line_number": 133,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "NGB (Bank)",
+          "Cards Centre"
+        ]
       },
       {
-        "requirement_id": "FR095",
-        "requirement_text": "SMS notification for EPP rejection due to insufficient balance shall be in a specific format with sufficient details.",
-        "original_text": "...and customer should be notified via SMS in a specific format with sufficient details.",
+        "requirement_id": "FR068",
+        "requirement_text": "Customer shall be notified via SMS in a specific format with sufficient details if an EPP request is rejected due to insufficient balance.",
+        "original_text": "customer should be notified via SMS in a specific format with sufficient details.",
         "source_section": "ASSUMPTIONS",
         "page_number": 3,
-        "line_number": 133
+        "line_number": 133,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       }
     ],
     "Non-Functional Requirements": [
       {
         "requirement_id": "NFR001",
-        "requirement_text": "Student registration data shall be stored in a common repository accessible across Online Banking, Mobile Banking, and Contact Center channels.",
+        "requirement_text": "Registered student details shall be saved in a common repository to ensure availability across all channels (Online Banking, Mobile Banking, Contact Center).",
         "original_text": "The student registered through Online Banking / Mobile Banking / Contact center should be saved in a common repository so that registered details are available across the channels.",
         "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
         "page_number": 1,
-        "line_number": 25
+        "line_number": 25,
+        "confidence_score": 0.95,
+        "stakeholders": [
+          "IT/Vendor",
+          "DevOps",
+          "Operations Team"
+        ]
       },
       {
         "requirement_id": "NFR002",
-        "requirement_text": "System shall allow business users to configure daily payment limits for IVR transactions.",
-        "original_text": "Daily Payment limit on IVR and OTP options for payment to be configurable by business,if required.",
-        "source_section": "FEE PAYMENT VIA IVR",
-        "page_number": 3,
-        "line_number": 94
+        "requirement_text": "System shall maintain transaction logs and details for previous transactions.",
+        "original_text": "System should maintain previous transaction logs and transaction details with unique reference number and description.",
+        "source_section": "C) FEE PAYMENT",
+        "page_number": 2,
+        "line_number": 62,
+        "confidence_score": 0.95,
+        "stakeholders": [
+          "Compliance Officer",
+          "Admin",
+          "NGB (Bank)"
+        ]
       },
       {
         "requirement_id": "NFR003",
-        "requirement_text": "System shall allow business users to configure OTP options for IVR payments.",
-        "original_text": "Daily Payment limit on IVR and OTP options for payment to be configurable by business,if required.",
-        "source_section": "FEE PAYMENT VIA IVR",
-        "page_number": 3,
-        "line_number": 94
+        "requirement_text": "Last 6 months of fee payment history shall be available in the system.",
+        "original_text": "Last 6 month history of fee payment should be available in the system.",
+        "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
+        "page_number": 2,
+        "line_number": 78,
+        "confidence_score": 0.95,
+        "stakeholders": [
+          "Customer",
+          "End-user",
+          "IT/Vendor"
+        ]
       },
       {
         "requirement_id": "NFR004",
-        "requirement_text": "E-Forms shall remain in the Contact Center queue for a maximum of 2 days until the transaction is posted.",
-        "original_text": "The E-Form created will be queued in Contact Center queue until the transaction is posted (max of 2 days).",
-        "source_section": "FEE PAYMENT VIA IVR",
-        "page_number": 3,
-        "line_number": 97
-      },
-      {
-        "requirement_id": "NFR005",
-        "requirement_text": "GL posting for fee payments shall occur in real-time.",
+        "requirement_text": "GL posting shall happen in real time.",
         "original_text": "GL posting also should happen in real time.",
         "source_section": "FEE POSTING",
         "page_number": 3,
-        "line_number": 103
+        "line_number": 103,
+        "confidence_score": 0.9,
+        "stakeholders": [
+          "NGB (Bank)",
+          "Operations Team",
+          "IT/Vendor"
+        ]
       },
       {
-        "requirement_id": "NFR006",
-        "requirement_text": "Each transaction posting shall include a proper description.",
+        "requirement_id": "NFR005",
+        "requirement_text": "Each transaction should have a proper description.",
         "original_text": "Each transaction should have a proper description.",
         "source_section": "FEE POSTING",
         "page_number": 3,
-        "line_number": 103
+        "line_number": 103,
+        "confidence_score": 0.9,
+        "stakeholders": [
+          "Compliance Officer",
+          "Operations Team"
+        ]
+      },
+      {
+        "requirement_id": "NFR006",
+        "requirement_text": "All transactions should be logged and transaction details with unique reference number and description should be saved.",
+        "original_text": "All the transactions should be logged and transaction details with unique reference number and description has to be saved",
+        "source_section": null,
+        "page_number": 3,
+        "line_number": 129,
+        "confidence_score": 0.95,
+        "stakeholders": [
+          "Compliance Officer",
+          "Admin",
+          "NGB (Bank)"
+        ]
       }
     ],
     "Business Rules": [
       {
         "requirement_id": "BR001",
-        "requirement_text": "Student registration shall only proceed if the customer has an active NGB credit card.",
-        "original_text": "Customer should have an active credit card to proceed with the student registration.",
-        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
+        "requirement_text": "Product team shall send an approved email with necessary school registration details in excel format to the Operations team.",
+        "original_text": "Product team should sent an approved email attaching necessary details for registration (mentioned above) in excel format to Operations team.",
+        "source_section": "A. SCHOOL REGISTRATION",
         "page_number": 1,
-        "line_number": 23
+        "line_number": 18,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Product Owner",
+          "Operations Team"
+        ]
       },
       {
         "requirement_id": "BR002",
-        "requirement_text": "The Student ID field and its re-entry field in any registration channel shall not allow copy-paste functionality.",
-        "original_text": "Student ID field and the Re-enter field should not allow copy paste option.",
-        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
+        "requirement_text": "Customer must have an active credit card to proceed with student registration.",
+        "original_text": "Customer should have an active credit card to proceed with the student registration.",
+        "source_section": "B. STUDENT REGISTRATION / AMENDMENT / DE-REGISTRATION",
         "page_number": 1,
-        "line_number": 34
+        "line_number": 23,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "NGB (Bank)"
+        ]
       },
       {
         "requirement_id": "BR003",
-        "requirement_text": "Student registration shall only be successful if the re-entered Student ID matches the initial Student ID.",
-        "original_text": "Student registration should happen only if the Student ID entered twice matches correctly.",
+        "requirement_text": "Student ID Number must be entered twice for verification purposes.",
+        "original_text": "Student ID Number has to be entered twice for verification purpose.",
         "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
         "page_number": 1,
-        "line_number": 36
+        "line_number": 34,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
+      },
+      {
+        "requirement_id": "BR003-a",
+        "requirement_text": "Student ID field and Re-enter field shall not allow copy-paste.",
+        "original_text": "Student ID field and the Re-enter field should not allow copy paste option.",
+        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
+        "page_number": 1,
+        "line_number": 34,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
         "requirement_id": "BR004",
-        "requirement_text": "Fee payment can only be initiated for students already registered by the customer.",
-        "original_text": "Customer can initiate fee payment only for the registered students.",
-        "source_section": "C) FEE PAYMENT",
-        "page_number": 2,
-        "line_number": 57
+        "requirement_text": "Student registration shall happen only if the Student ID entered twice matches correctly.",
+        "original_text": "Student registration should happen only if the Student ID entered twice matches correctly.",
+        "source_section": "STUDENT REGISTRATION / AMENDMENT / DEREGISTRATION VIA ONLINE BANKING / MOBILE BANKING",
+        "page_number": 1,
+        "line_number": 36,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
         "requirement_id": "BR005",
-        "requirement_text": "Each fee type against each student shall be an individual payment entry.",
-        "original_text": "Each fee type against each student will be an individual entry.",
+        "requirement_text": "Customer can initiate fee payment only for registered students.",
+        "original_text": "Customer can initiate fee payment only for the registered students.",
         "source_section": "C) FEE PAYMENT",
         "page_number": 2,
-        "line_number": 57
+        "line_number": 57,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "NGB (Bank)"
+        ]
       },
       {
         "requirement_id": "BR006",
-        "requirement_text": "Only active NGB credit cards shall be available for fee payment selection.",
-        "original_text": "Only active credit cards should be available for the payment...",
+        "requirement_text": "Only active credit cards should be available for payment.",
+        "original_text": "Only active credit cards should be available for the payment",
         "source_section": "C) FEE PAYMENT",
         "page_number": 2,
-        "line_number": 59
+        "line_number": 59,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "NGB (Bank)"
+        ]
       },
       {
         "requirement_id": "BR007",
-        "requirement_text": "Payment shall only be allowed if the customer has sufficient available balance on the selected credit card.",
+        "requirement_text": "Payment shall be allowed only if the customer has sufficient balance.",
         "original_text": "Payment to be allowed only if customer has sufficient balance.",
         "source_section": "C) FEE PAYMENT",
         "page_number": 2,
-        "line_number": 61
+        "line_number": 61,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "NGB (Bank)"
+        ]
       },
       {
         "requirement_id": "BR008",
-        "requirement_text": "The Contact Center is responsible for verifying EPP transaction details forwarded to the Cards Center via E-Form.",
-        "original_text": "Note: Contact Center will be responsible for the verification of EPP transaction details forwarded to Cards center thru E-Form.",
-        "source_section": "Note",
-        "page_number": 3,
-        "line_number": 101
+        "requirement_text": "If sufficient balance is available, the payment item shall be added to the payment list.",
+        "original_text": "If sufficient balance is available to complete the transaction, this item to be added to the payment list.",
+        "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
+        "page_number": 2,
+        "line_number": 70,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "End-user"
+        ]
       },
       {
         "requirement_id": "BR009",
-        "requirement_text": "Each payment amount shall be debited individually from the customer's credit card.",
-        "original_text": "When customer initiates a payment, amount should be debited individually from the customer\u2019s credit card...",
-        "source_section": "FEE POSTING",
-        "page_number": 3,
-        "line_number": 103
+        "requirement_text": "Each payment type for each student shall be an individual entry in cards and school accounts.",
+        "original_text": "Each Payment type for each student to be an individual entry in cards and school account.",
+        "source_section": "FEE PAYMENT VIA ONLINE BANKING / MOBILE BANKING",
+        "page_number": 2,
+        "line_number": 76,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "NGB (Bank)",
+          "School"
+        ]
       },
       {
         "requirement_id": "BR010",
-        "requirement_text": "Each payment amount shall be credited individually to the registered school's account.",
-        "original_text": "...and credited individually to the registered school\u2019s account.",
-        "source_section": "FEE POSTING",
+        "requirement_text": "Transaction description will not be available in Vision Plus, and will be like 'MEMO POSTED CREDIT'.",
+        "original_text": "Please note that description of the transaction will not be available in Vision Plus. Transaction description will be like \u201cMEMO POSTED CREDIT\u201d).",
+        "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 103
+        "line_number": 96,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Contact Center Agent",
+          "NGB (Bank)"
+        ]
       },
       {
         "requirement_id": "BR011",
-        "requirement_text": "Transaction descriptions shall not exceed 40 characters.",
-        "original_text": "Maximum length allowed for transaction description is 40 characters.",
-        "source_section": "FEE POSTING",
+        "requirement_text": "Contact Center will be responsible for the verification of EPP transaction details forwarded to Cards center through E-Form.",
+        "original_text": "Contact Center will be responsible for the verification of EPP transaction details forwarded to Cards center thru E-Form.",
+        "source_section": "Note:",
         "page_number": 3,
-        "line_number": 107
+        "line_number": 101,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Contact Center Agent",
+          "Cards Centre"
+        ]
       },
       {
         "requirement_id": "BR012",
-        "requirement_text": "The AUTH code shall serve as the Unique Reference Number for transactions across all systems.",
-        "original_text": "AUTH code will be used as Unique Reference Number across the systems.",
-        "source_section": "Note",
+        "requirement_text": "Maximum length allowed for transaction description is 40 characters.",
+        "original_text": "Maximum length allowed for transaction description is 40 characters.",
+        "source_section": "FEE POSTING",
         "page_number": 3,
-        "line_number": 109
+        "line_number": 107,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "IT/Vendor",
+          "Operations Team"
+        ]
+      },
+      {
+        "requirement_id": "BR012-a",
+        "requirement_text": "Some parameters in the transaction description should be trimmed to meet the maximum length constraint.",
+        "original_text": "Some of the parameters in description should be trimmed off to meet the maximum length constraint.",
+        "source_section": "FEE POSTING",
+        "page_number": 3,
+        "line_number": 107,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "IT/Vendor",
+          "Operations Team"
+        ]
       },
       {
         "requirement_id": "BR013",
-        "requirement_text": "Loyalty points shall not be granted for school fee payments that utilize the Easy Payment Plan (EPP) option.",
-        "original_text": "Loyalty points will not be granted for the School Fee payment if EPP option is availed.",
-        "source_section": "ASSUMPTIONS",
+        "requirement_text": "AUTH code will be used as a Unique Reference Number across the systems.",
+        "original_text": "AUTH code will be used as Unique Reference Number across the systems.",
+        "source_section": "Note:",
         "page_number": 3,
-        "line_number": 132
+        "line_number": 109,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "IT/Vendor",
+          "NGB (Bank)"
+        ]
       },
       {
         "requirement_id": "BR014",
-        "requirement_text": "EPP conversion requests shall be rejected if sufficient balance is not available at the time of conversion (e.g., due to other payment settlement or auto debit).",
-        "original_text": "If sufficient balance is not available during EPP conversion (due to other payment settlement or auto debit), the EPP request should be rejected...",
+        "requirement_text": "Individual posting entry shall happen for each student and fee type, even for multiple payments.",
+        "original_text": "Individual posting entry should happen for each student and fee type even if there are more than one payment.",
+        "source_section": "Note:",
+        "page_number": 3,
+        "line_number": 111,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "NGB (Bank)",
+          "Operations Team"
+        ]
+      },
+      {
+        "requirement_id": "BR015",
+        "requirement_text": "Loyalty points will not be granted for School Fee payment if the EPP option is availed.",
+        "original_text": "Loyalty points will not be granted for the School Fee payment if EPP option is availed.",
         "source_section": "ASSUMPTIONS",
         "page_number": 3,
-        "line_number": 133
+        "line_number": 132,
+        "confidence_score": 1.0,
+        "stakeholders": [
+          "Customer",
+          "NGB (Bank)",
+          "Product Owner"
+        ]
       }
     ],
     "Ambiguous or Subjective Requirements": [
       {
         "requirement_id": "Q001",
-        "requirement_text": "The feasibility and cost of implementing a new IVR module (text-to-speech) to voice out student names needs to be checked by IT/vendor.",
-        "original_text": "(The student name can be voiced out but will require to implement a new IVR module(text to speech) which requires to be checked for cost and feasibility from IT/vendor)",
-        "reason": "This is an uncommitted feature that requires a separate feasibility/cost study. It is not a firm requirement yet.",
+        "requirement_text": "The student name can be voiced out but will require to implement a new IVR module (text to speech) which requires to be checked for cost and feasibility from IT/vendor.",
+        "original_text": "The student name can be voiced out but will require to implement a new IVR module(text to speech) which requires to be checked for cost and feasibility from IT/vendor)",
+        "reason": "This is a conditional requirement that needs a decision on cost and feasibility. It's not a committed requirement yet.",
         "source_section": "FEE PAYMENT VIA IVR",
         "page_number": 3,
-        "line_number": 88
+        "line_number": 88,
+        "confidence_score": 0.6,
+        "stakeholders": [
+          "IT/Vendor",
+          "Product Owner",
+          "NGB (Bank)"
+        ]
       }
     ],
-    "Other_Observations": [
+    "Other Observations": [
       {
         "observation_id": "OBS001",
-        "observation_text": "The SRS describes a manual process for school registration data submission (Product team sending details in Excel format to Operations team) which is external to the system requirements but implicitly defines the data source for system registration.",
-        "original_text": "Product team should sent an approved email attaching necessary details for registration (mentioned above) in excel format to Operations team.",
+        "observation_text": "Repetition of requirement: SMS sending for student registration/amendment/de-registration is mentioned multiple times (Line 27, 36, 51). While triggered by different channels, the core requirement is identical for the SMS content and purpose.",
         "page_number": 1,
-        "line_number": 18
+        "line_number": 27,
+        "confidence_score": 0.9
       },
       {
         "observation_id": "OBS002",
-        "observation_text": "The SRS describes an operational procedure for Contact Center agents to check and verify the customer's RIM number (Line 043), implying the system needs to display this information to the agent but not perform the verification itself.",
-        "original_text": "Agent checks and verifies the RIM number of the customer.",
-        "page_number": 2,
-        "line_number": 43
+        "observation_text": "Repetition of business rule: Student ID entered twice for verification and no copy-paste is stated multiple times (Line 34, 47a).",
+        "page_number": 1,
+        "line_number": 34,
+        "confidence_score": 0.9
       },
       {
         "observation_id": "OBS003",
-        "observation_text": "Manual copying of RIM/Card number from IVR to E-Form by the agent is required (Line 045). This indicates a lack of direct system integration for this data transfer, which could lead to errors or inefficiencies.",
-        "original_text": "The RIM Number or Card number available in IVR has to be copied manually by the agent to the E-Form.",
-        "page_number": 2,
-        "line_number": 45
+        "observation_text": "Repetition of functional requirement: Authentication via IVR TIN number (Line 40, 82) is identical.",
+        "page_number": 1,
+        "line_number": 40,
+        "confidence_score": 0.9
       },
       {
         "observation_id": "OBS004",
-        "observation_text": "The SRS describes an operational procedure for Contact Center agents to refer customers to the 'Fee Payment' IVR option (Line 050), implying system support for this handoff.",
-        "original_text": "Customer should have an option to proceed for Fee Payment on the same call and Contact Center agent should refer those reuqests to \u201cFee Payment\u201d option in IVR.",
-        "page_number": 2,
-        "line_number": 50
+        "observation_text": "Repetition of functional requirement: New 'School Fee Payment' option under credit card section in IVR (Line 41, 83) is identical.",
+        "page_number": 1,
+        "line_number": 41,
+        "confidence_score": 0.9
       },
       {
         "observation_id": "OBS005",
-        "observation_text": "Transaction description in Vision Plus for IVR payments will be generic ('MEMO POSTED CREDIT') (Line 096). This implies a need for a separate detailed transaction log or for specific descriptions to be passed from IVR/E-Form, impacting auditability/reconciliation unless handled.",
-        "original_text": "Please note that description of the transaction will not be available in Vision Plus. Transaction description will be like \u201cMEMO POSTED CREDIT\u201d).",
-        "page_number": 3,
-        "line_number": 96
+        "observation_text": "Repetition of functional requirement: 'Student Registration' and 'Fee Payment' options after selecting 'School Fee Payment' in IVR (Line 42, 84) are identical.",
+        "page_number": 1,
+        "line_number": 42,
+        "confidence_score": 0.9
       },
       {
         "observation_id": "OBS006",
-        "observation_text": "Assumption: Schools registered for fee payment will already possess an NGB account number (Line 131). This implies a prerequisite for school onboarding not managed by this system.",
-        "original_text": "Schools register with NGB for school fee payment will have NGB account number.",
-        "page_number": 3,
-        "line_number": 131
+        "observation_text": "Repetition of business rule: 'Payment allowed only if sufficient balance' (Line 61, 74, 128) is identical.",
+        "page_number": 2,
+        "line_number": 61,
+        "confidence_score": 0.9
       },
       {
         "observation_id": "OBS007",
-        "observation_text": "Integration with school websites for fee information retrieval is explicitly out of scope (Line 135).",
-        "original_text": "Any integration to school\u2019s website for Fee information retrieval is out of scope.",
-        "page_number": 4,
-        "line_number": 135
+        "observation_text": "Repetition of business rule: 'Each fee type against each student will be an individual entry' / 'Individual posting entry should happen for each student and fee type' (Line 57, 76, 111) is identical across various sections.",
+        "page_number": 2,
+        "line_number": 57,
+        "confidence_score": 0.9
       },
       {
         "observation_id": "OBS008",
-        "observation_text": "Integration with any other payment gateway is explicitly out of scope (Line 136).",
-        "original_text": "Any Integration to any other payment gateway is out of scope.",
-        "page_number": 4,
-        "line_number": 136
+        "observation_text": "Repetition of NFR: 'System should maintain previous transaction logs and transaction details' / 'All the transactions should be logged and transaction details...has to be saved' (Line 62, 129) is largely identical.",
+        "page_number": 2,
+        "line_number": 62,
+        "confidence_score": 0.9
       }
     ]
   }

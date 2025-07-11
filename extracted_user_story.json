@@ -1,105 +1,33 @@
 [
   {
     "requirement_id": "REQ-001",
-    "requirement": "System shall support school fee payments via E-Form, facilitated by a Contact Center agent.",
-    "confidence_score": 0.98,
+    "requirement": "School registration screen shall capture School Name, Location, and School Account Number with NGB.",
+    "confidence_score": 0.9,
     "stories": [
       {
-        "story_type": "Epic",
-        "user_story": "As a Contact Center Agent, I want to facilitate school fee payments via an E-Form, so that parents/students can conveniently pay their fees with my assistance.",
-        "acceptance_criteria": [
-          "Given a Contact Center Agent is logged into the system, When the agent needs to process a school fee payment, Then they can initiate the E-Form payment process.",
-          "Given a parent is on a call with a Contact Center Agent to pay school fees, When the agent guides them through completing the E-Form and processes payment, Then the fee is successfully collected and confirmed."
-        ],
-        "tshirt_size": "XL",
-        "questions_for_po": [
-          "Are there specific school fee types (e.g., tuition, books, uniforms) that need to be supported or differentiated in the E-Form?",
-          "What are the expected peak payment periods and corresponding performance requirements for the system?",
-          "Are there any specific compliance or auditing requirements (e.g., PCI-DSS, GDPR) for handling and recording these payments?"
-        ]
-      },
-      {
         "story_type": "User Story",
-        "user_story": "As a Contact Center Agent, I want to initiate a new school fee payment E-Form, so that I can begin the process of collecting school fees for a specific student or parent.",
+        "user_story": "As a New School Administrator, I want to register our school by providing its name, location, and NGB account number, so that our school can be officially recognized and access system features.",
         "acceptance_criteria": [
-          "Given an authenticated Contact Center Agent is in the system, When the agent selects the option to initiate a new school fee payment, Then a blank E-Form for school fee payment is presented.",
-          "Given an authenticated Contact Center Agent on a call with an existing parent/student, When the agent searches for and selects the parent/student's profile, Then the E-Form pre-populates with known student details (e.g., student ID, name, class)."
-        ],
-        "tshirt_size": "S",
-        "questions_for_po": [
-          "What data points are required to uniquely identify a student or parent in the system for pre-population?",
-          "Should there be an option to create a new student/parent record if one doesn't exist during this process, or is that handled separately?"
-        ]
-      },
-      {
-        "story_type": "User Story",
-        "user_story": "As a Contact Center Agent, I want to enter and validate relevant student and fee details into the E-Form, so that I can accurately record the payment purpose and associated student information.",
-        "acceptance_criteria": [
-          "Given an active School Fee Payment E-Form, When the Contact Center Agent enters valid student ID, student name, fee amount, and fee type, Then the system accepts and displays the input.",
-          "Given an active School Fee Payment E-Form, When the Contact Center Agent enters an invalid fee amount (e.g., non-numeric, negative value), Then the system displays an inline validation error message and prevents submission.",
-          "Given an active School Fee Payment E-Form, When the Contact Center Agent leaves a mandatory field blank (e.g., fee amount), Then the system displays an inline validation error message upon attempting to proceed."
-        ],
-        "tshirt_size": "S",
-        "questions_for_po": [
-          "What are all the mandatory and optional fields required on the E-Form for a school fee payment?",
-          "Are there predefined fee types to select from a dropdown, or is it a free text entry field?"
-        ]
-      },
-      {
-        "story_type": "User Story",
-        "user_story": "As a Contact Center Agent, I want to select a payment method and submit the E-Form for processing, so that I can finalize the E-Form submission and proceed with the financial transaction.",
-        "acceptance_criteria": [
-          "Given a fully populated and validated School Fee Payment E-Form, When the Contact Center Agent selects 'Credit Card' as the payment method, Then the system displays fields for credit card details (card number, expiry, CVV, cardholder name).",
-          "Given a fully populated and validated School Fee Payment E-Form, When the Contact Center Agent selects 'Bank Transfer' as the payment method, Then the system provides bank account details for the school or instructions for manual transfer.",
-          "Given a fully populated and validated School Fee Payment E-Form with valid payment details entered, When the Contact Center Agent clicks 'Submit Payment', Then the system initiates the payment gateway transaction."
+          "Given I am on the school registration screen and all required fields are visible and editable,",
+          "When I enter a valid 'School Name', a valid 'Location', and a valid 'NGB School Account Number', and submit the form,",
+          "Then the school registration details should be successfully saved and I am notified of the successful registration.",
+          "Given I am on the school registration screen,",
+          "When I attempt to submit the form with 'School Name' left blank,",
+          "Then I should see a clear error message indicating that 'School Name' is a required field.",
+          "Given I am on the school registration screen,",
+          "When I attempt to submit the form with 'Location' left blank,",
+          "Then I should see a clear error message indicating that 'Location' is a required field.",
+          "Given I am on the school registration screen,",
+          "When I attempt to submit the form with an 'NGB School Account Number' that does not meet the specified NGB format/rules,",
+          "Then I should see a clear error message indicating that the 'NGB School Account Number' is invalid."
         ],
         "tshirt_size": "M",
         "questions_for_po": [
-          "What specific payment methods need to be supported beyond credit cards and bank transfers (e.g., debit cards, digital wallets, cash)?",
-          "Are there specific UI or security requirements for collecting sensitive payment information (e.g., tokenization, masked input)?"
-        ]
-      },
-      {
-        "story_type": "User Story",
-        "user_story": "As the System, I want to securely process school fee payments through an integrated payment gateway, so that funds are successfully transferred and the payment status is accurately recorded.",
-        "acceptance_criteria": [
-          "Given a payment initiated via the E-Form with valid payment details and a selected payment method, When the system sends the transaction request to the configured payment gateway, Then the payment gateway processes the transaction.",
-          "Given a payment transaction successfully processed by the payment gateway, When the system receives a success confirmation, Then the system records the payment as 'Completed' with a unique transaction ID and timestamp.",
-          "Given a payment transaction declined by the payment gateway, When the system receives a failure notification, Then the system records the payment as 'Failed' with the reason for failure (e.g., 'Insufficient Funds', 'Card Expired') and makes this available to the agent."
-        ],
-        "tshirt_size": "L",
-        "questions_for_po": [
-          "Which specific payment gateway (e.g., Stripe, PayPal, local bank's gateway) should be integrated for payment processing?",
-          "What level of detail should be logged for both successful and failed transactions for auditing and reconciliation purposes?",
-          "Are there any specific retry mechanisms or automated failure handling processes required for transient payment errors?"
-        ]
-      },
-      {
-        "story_type": "User Story",
-        "user_story": "As a Contact Center Agent, I want to receive immediate confirmation of a successful payment and access a payment receipt, so that I can provide proof of payment to the parent/student and maintain internal records.",
-        "acceptance_criteria": [
-          "Given a successfully processed school fee payment, When the Contact Center Agent views the E-Form status, Then the system displays a 'Payment Successful' confirmation message including the transaction ID and amount paid.",
-          "Given a successfully processed school fee payment, When the Contact Center Agent requests a payment receipt, Then the system generates and displays a printable/email-able receipt with all transaction details.",
-          "Given a successfully processed school fee payment, When the Contact Center Agent closes the payment E-Form, Then the payment record is saved and accessible from the student's payment history."
-        ],
-        "tshirt_size": "S",
-        "questions_for_po": [
-          "What specific information must be included on the payment receipt (e.g., school name, student name, fee type, breakdown of costs, transaction ID, date/time, agent ID, payment method used)?",
-          "Should the system automatically send an email receipt to the parent/guardian upon successful payment, or is it only available on demand via the agent?"
-        ]
-      },
-      {
-        "story_type": "User Story",
-        "user_story": "As a Contact Center Agent, I want to handle situations where a school fee payment fails, so that I can provide appropriate support and guide the parent/student through resolving the issue.",
-        "acceptance_criteria": [
-          "Given a school fee payment attempt that resulted in a decline by the payment gateway, When the Contact Center Agent views the E-Form, Then the system displays a clear error message indicating the reason for failure (e.g., 'Card Expired', 'Insufficient Funds', 'Invalid CVV').",
-          "Given a school fee payment attempt that resulted in failure, When the Contact Center Agent corrects the payment details or selects an alternative payment method, Then the system allows the agent to retry the payment with the updated information.",
-          "Given a school fee payment attempt that resulted in failure and the agent chooses not to retry, Then the system saves the failed payment attempt details for auditing and reporting purposes."
-        ],
-        "tshirt_size": "M",
-        "questions_for_po": [
-          "Are there specific standard error codes or messages that should be displayed to the agent for different failure scenarios, and should these be user-friendly for communication to the parent?",
-          "What logging or reporting is required for failed payment attempts, and how long should this data be retained?"
+          "What are the precise validation rules or format requirements for the 'NGB School Account Number'?",
+          "Does 'with NGB' imply an external API call or integration for real-time verification of the School Account Number, or is it purely format/pattern validation?",
+          "What level of detail is required for 'Location' (e.g., just city, full address, specific format)?",
+          "What is the expected user experience immediately after a successful school registration submission (e.g., redirect to dashboard, confirmation page, email notification)?",
+          "Are there any specific security or privacy requirements for the captured school data?"
         ]
       }
     ]
