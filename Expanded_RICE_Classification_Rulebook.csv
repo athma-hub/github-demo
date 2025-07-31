@@ -1,0 +1,20 @@
+Bucket,Classification,Outcome,Description
+Strategic Success,Strategic Alignment Win,Win,High alignment with strategic priorities and vendor preference.
+Strategic Success,CxO Driven Win,Win,High impact and strategic alignment with C-level agenda.
+Strategic Success,Cross-BU Scalability Win,Win,Proposal had high potential to scale across customer business units.
+Strategic Success,Primary Vendor Preference Win,Win,Win supported by customer's existing preference for the vendor.
+Innovation & First-Mover Advantage,Innovation-Led Win,Win,Won due to novel GenAI approach and early adopter interest.
+Innovation & First-Mover Advantage,Quick-Win Prototype Win,Win,"Low effort, medium reach and impact – likely a quick prototype."
+Innovation & First-Mover Advantage,GenAI Showcase Win,Win,Proposal included GenAI showcase with LLM or CoPilot integration.
+Relationship & Legacy Advantage,Relationship Win,Win,Won despite low score due to preferred vendor relationship.
+Relationship & Legacy Advantage,Incumbent Win,Win,Vendor has strong delivery history or prior engagement.
+Relationship & Legacy Advantage,Legacy System Familiarity Win,Win,Proposal was successful due to deep knowledge of client legacy systems.
+Execution or Value Gaps,Execution Risk Loss,Loss,Low confidence and high effort raised delivery concerns.
+Execution or Value Gaps,Unclear ROI Loss,Loss,Proposal lacked strong business case or clear ROI.
+Execution or Value Gaps,Overengineered Loss,Loss,Proposal was too complex for its business value.
+Execution or Value Gaps,Poor Fit Loss,Loss,Proposal did not address the key user group or geography.
+Execution or Value Gaps,Mismatch with AI Maturity Loss,Loss,Proposal ambition exceeded customer's AI readiness.
+Competitive & Commercial Pressure,Pricing Mismatch Loss,Loss,Strong proposal but lost due to pricing in sensitive region.
+Competitive & Commercial Pressure,Competitor Undercut Loss,Loss,Strong proposal lost to faster or more agile competitor.
+Competitive & Commercial Pressure,Positioning Disadvantage Loss,Loss,Lost due to not being preferred/primary vendor.
+Competitive & Commercial Pressure,Loss Despite High Score,Loss,High RICE score but still lost; suggests commercial/strategic mismatch.
