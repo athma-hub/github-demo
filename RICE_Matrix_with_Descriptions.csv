@@ -1,0 +1,21 @@
+RICE Dimension,Measure,Type,Description
+Reach,No. of personas impacted,Quantitative,The total number of customer personas or user groups that will benefit from the proposal.
+Reach,Functional coverage breadth,Quantitative,How many distinct business functions or departments the solution will cover.
+Reach,Strategic importance of functions touched,Qualitative,The strategic importance of the targeted functions in the customer’s business model.
+Reach,"Stakeholder span (Ops, IT, Legal, etc.)",Qualitative,"The diversity and breadth of stakeholders the proposal addresses (e.g., Operations, IT, Legal)."
+Reach,Likeliness of cross-departmental adoption,Qualitative,The likelihood that the proposed solution will be adopted across multiple departments.
+Impact,Expected ROI over 12–24 months,Quantitative,Expected financial returns over 12–24 months due to AI/GenAI implementation.
+Impact,AI/GenAI value linked to core KPIs,Qualitative,The degree to which the AI/GenAI solution impacts the customer's core KPIs.
+Impact,Operational efficiency improvement,Quantitative,"Estimated improvement in operational efficiency (e.g., time savings, productivity)."
+Impact,Differentiation vs competitors,Qualitative,How the proposal’s AI/GenAI offering differentiates itself from competitors’ offerings.
+Impact,Fit to customer’s AI maturity roadmap,Qualitative,The alignment of the proposed AI/GenAI solution with the customer’s AI maturity roadmap.
+Confidence,Data availability and quality at client,Quantitative,"The extent to which customer data is ready, available, and of sufficient quality for AI usage."
+Confidence,AI/GenAI architecture readiness,Qualitative,The readiness and feasibility of the proposed AI/GenAI architecture for the customer.
+Confidence,Match with past successfully delivered use cases,Qualitative,The similarity of the proposal to previously delivered successful AI/GenAI projects.
+Confidence,Customer buy-in or enthusiasm level,Qualitative,The degree of buy-in or excitement demonstrated by customer stakeholders.
+Confidence,Risk factors identified and mitigated,Qualitative,How well the proposal addresses and mitigates potential risks.
+Effort,Estimated implementation timeline,Quantitative,The estimated time required to implement the solution successfully.
+Effort,Custom code and infra needs,Quantitative,The amount of custom development or infrastructure setup required.
+Effort,AI governance & explainability overhead,Qualitative,"The level of governance, explainability, and compliance effort needed for AI models."
+Effort,Third-party integration dependencies,Qualitative,The number and complexity of third-party systems or tools to integrate.
+Effort,Complexity of change management,Qualitative,The complexity of change management and training required for adoption.
