@@ -1,0 +1,181 @@
+import pandas as pd
+from typing import List, Dict
+
+# Define Rule structure
+Rule = Dict[str, any]
+
+# Step 1: Define classification rules
+rules: List[Rule] = [
+    # Strategic Success
+    {
+        "name": "Strategic Alignment Win",
+        "bucket": "Strategic Success",
+        "outcome": "Win",
+        "description": "High alignment with strategic priorities and vendor preference.",
+        "condition": lambda r: r["Reach"] > 0.75 and r["Impact"] > 0.75 and r["Confidence"] > 0.75 and r["Effort"] <= 0.6 and r["Vendor_Position"] in ["Preferred", "Primary"]
+    },
+    {
+        "name": "CxO Driven Win",
+        "bucket": "Strategic Success",
+        "outcome": "Win",
+        "description": "High impact and strategic alignment with C-level agenda.",
+        "condition": lambda r: r["Impact"] > 0.8 and r["Confidence"] > 0.7 and r["AI_Maturity"] in ["Adopter", "Leader"]
+    },
+    {
+        "name": "Cross-BU Scalability Win",
+        "bucket": "Strategic Success",
+        "outcome": "Win",
+        "description": "Proposal had high potential to scale across customer business units.",
+        "condition": lambda r: r["Reach"] > 0.7 and r["Impact"] > 0.7 and r["AI_Maturity"] == "Leader"
+    },
+    {
+        "name": "Primary Vendor Preference Win",
+        "bucket": "Strategic Success",
+        "outcome": "Win",
+        "description": "Win supported by customer's existing preference for the vendor.",
+        "condition": lambda r: r["Vendor_Position"] == "Primary" and r["Confidence"] > 0.6
+    },
+
+    # Innovation & First-Mover Advantage
+    {
+        "name": "Innovation-Led Win",
+        "bucket": "Innovation & First-Mover Advantage",
+        "outcome": "Win",
+        "description": "Won due to novel GenAI approach and early adopter interest.",
+        "condition": lambda r: r["Impact"] > 0.85 and r["AI_Maturity"] == "Explorer"
+    },
+    {
+        "name": "Quick-Win Prototype Win",
+        "bucket": "Innovation & First-Mover Advantage",
+        "outcome": "Win",
+        "description": "Low effort, medium reach and impact – likely a quick prototype.",
+        "condition": lambda r: r["Reach"] > 0.4 and r["Impact"] > 0.4 and r["Effort"] < 0.5
+    },
+    {
+        "name": "GenAI Showcase Win",
+        "bucket": "Innovation & First-Mover Advantage",
+        "outcome": "Win",
+        "description": "Proposal included GenAI showcase with LLM or CoPilot integration.",
+        "condition": lambda r: r["Impact"] > 0.7 and r["Confidence"] > 0.7 and r["Effort"] < 0.6
+    },
+
+    # Relationship & Legacy Advantage
+    {
+        "name": "Relationship Win",
+        "bucket": "Relationship & Legacy Advantage",
+        "outcome": "Win",
+        "description": "Won despite low score due to preferred vendor relationship.",
+        "condition": lambda r: r["RICE_Score"] < 0.6 and r["Vendor_Position"] in ["Preferred", "Primary"]
+    },
+    {
+        "name": "Incumbent Win",
+        "bucket": "Relationship & Legacy Advantage",
+        "outcome": "Win",
+        "description": "Vendor has strong delivery history or prior engagement.",
+        "condition": lambda r: r["Confidence"] > 0.7 and r["Vendor_Position"] == "Preferred"
+    },
+    {
+        "name": "Legacy System Familiarity Win",
+        "bucket": "Relationship & Legacy Advantage",
+        "outcome": "Win",
+        "description": "Proposal was successful due to deep knowledge of client legacy systems.",
+        "condition": lambda r: r["Confidence"] > 0.65 and r["Effort"] <= 0.7
+    },
+
+    # Execution or Value Gaps
+    {
+        "name": "Execution Risk Loss",
+        "bucket": "Execution or Value Gaps",
+        "outcome": "Loss",
+        "description": "Low confidence and high effort raised delivery concerns.",
+        "condition": lambda r: r["Confidence"] < 0.5 and r["Effort"] > 0.75
+    },
+    {
+        "name": "Unclear ROI Loss",
+        "bucket": "Execution or Value Gaps",
+        "outcome": "Loss",
+        "description": "Proposal lacked strong business case or clear ROI.",
+        "condition": lambda r: r["Impact"] < 0.5
+    },
+    {
+        "name": "Overengineered Loss",
+        "bucket": "Execution or Value Gaps",
+        "outcome": "Loss",
+        "description": "Proposal was too complex for its business value.",
+        "condition": lambda r: r["Effort"] > 0.75 and (r["Reach"] + r["Impact"]) / 2 < 0.6
+    },
+    {
+        "name": "Poor Fit Loss",
+        "bucket": "Execution or Value Gaps",
+        "outcome": "Loss",
+        "description": "Proposal did not address the key user group or geography.",
+        "condition": lambda r: r["Reach"] < 0.4
+    },
+    {
+        "name": "Mismatch with AI Maturity Loss",
+        "bucket": "Execution or Value Gaps",
+        "outcome": "Loss",
+        "description": "Proposal ambition exceeded customer's AI readiness.",
+        "condition": lambda r: r["AI_Maturity"] == "Explorer" and r["Effort"] > 0.7
+    },
+
+    # Competitive & Commercial Pressure
+    {
+        "name": "Pricing Mismatch Loss",
+        "bucket": "Competitive & Commercial Pressure",
+        "outcome": "Loss",
+        "description": "Strong proposal but lost due to pricing in sensitive region.",
+        "condition": lambda r: r["RICE_Score"] > 0.8 and r["Geography"] in ["India", "South America"]
+    },
+    {
+        "name": "Competitor Undercut Loss",
+        "bucket": "Competitive & Commercial Pressure",
+        "outcome": "Loss",
+        "description": "Strong proposal lost to faster or more agile competitor.",
+        "condition": lambda r: r["RICE_Score"] > 0.8 and r["Confidence"] > 0.75
+    },
+    {
+        "name": "Positioning Disadvantage Loss",
+        "bucket": "Competitive & Commercial Pressure",
+        "outcome": "Loss",
+        "description": "Lost due to not being preferred/primary vendor.",
+        "condition": lambda r: r["Vendor_Position"] not in ["Preferred", "Primary"] and r["Confidence"] > 0.6
+    },
+    {
+        "name": "Loss Despite High Score",
+        "bucket": "Competitive & Commercial Pressure",
+        "outcome": "Loss",
+        "description": "High RICE score but still lost; suggests commercial/strategic mismatch.",
+        "condition": lambda r: r["RICE_Score"] > 0.8
+    }
+]
+
+# Step 2: Apply classification
+def classify_proposals(df: pd.DataFrame, rules: List[Rule]) -> pd.DataFrame:
+    def classify(row):
+        for rule in rules:
+            if row["Outcome"] == rule["outcome"] and rule["condition"](row):
+                return pd.Series([rule["bucket"], rule["name"], rule["description"]])
+        return pd.Series(["Unclassified", "Unclassified", "No matching rule found."])
+    
+    df["RICE_Score"] = (df["Reach"] * df["Impact"] * df["Confidence"]) / df["Effort"]
+    df[["Classification_Bucket", "Classification", "Explanation"]] = df.apply(classify, axis=1, result_type="expand")
+    return df
+
+# Step 3: Sample usage
+if __name__ == "__main__":
+    sample_data = {
+        "Proposal_ID": [201, 202, 203, 204],
+        "Reach": [0.85, 0.3, 0.6, 0.9],
+        "Impact": [0.9, 0.4, 0.7, 0.95],
+        "Confidence": [0.8, 0.6, 0.4, 0.95],
+        "Effort": [0.5, 0.6, 0.9, 0.6],
+        "AI_Maturity": ["Leader", "Explorer", "Explorer", "Adopter"],
+        "Vendor_Position": ["Preferred", "Secondary", "Primary", "Preferred"],
+        "Geography": ["US", "India", "Germany", "US"],
+        "Outcome": ["Win", "Loss", "Loss", "Loss"]
+    }
+
+    df = pd.DataFrame(sample_data)
+    classified = classify_proposals(df, rules)
+    print(classified[["Proposal_ID", "RICE_Score", "Classification_Bucket", "Classification", "Explanation"]])
